@@ -1,0 +1,416 @@
+:root {
+    --bs-body-font-family: 'Roboto', sans-serif;
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #202020;
+    --bs-heading-font-family: 'Roboto Slab', serif;
+
+    --orange: #ff6b35;
+    --yellow: #ffc312;
+    --gree-200: #40b625;
+    --gray: #999999;
+    --primary-blue: #003049;
+    --white: #ffffff;
+
+    --how-we-work-bg: #f8f9fa;
+    --pack-bg: #fff3e7;
+    --contact-bg: #fff3e7;
+    --contact-card-bg: #ffc312;
+    --team-bg: #ffc312;
+    --navbar-bg: #003049;
+    --footer-bg: #003049;
+
+    --box-shadow: 3px 1px 18px 0 rgba(0, 0, 0, 0.09);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--bs-heading-font-family);
+}
+
+svg,
+img {
+    vertical-align: middle;
+}
+
+.section-heading {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.text-yellow {
+    color: var(--yellow);
+}
+.text-red {
+    color: var(--orange);
+}
+.text-blue {
+    color: var(--primary-blue);
+}
+.text-green {
+    color: var(--gree-200);
+}
+/* ============= Header Style ================ */
+.header {
+    background-image: url('./../images/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+}
+
+.header .navbar {
+    background-color: var(--navbar-bg);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.header .navbar.active {
+    background-color: var(--navbar-bg);
+    box-shadow: 0px 4px 12px -2px rgba(0, 0, 0, 0.15);
+}
+.navbar-nav .nav-link {
+    color: var(--white);
+}
+.navbar-nav .nav-link:hover {
+    color: #cdcdcd;
+}
+
+.header__scroll {
+    right: 0;
+}
+
+.header__scroll-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: var(--white);
+    line-height: 1;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+}
+.header__scroll-icon {
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 20px;
+    animation: bounce 4s infinite;
+}
+
+.navbar-dark {
+    --bs-navbar-toggler-border-color: var(--white);
+}
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+.navbar-toggler-icon {
+    background-image: url('../images/bars-icon.svg');
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+    object-fit: cover;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.hero__content {
+    max-width: 1000px;
+    width: 100%;
+    min-height: 100dvh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.hero__btn {
+    background-color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    color: var(--white);
+}
+.hero__btn:hover {
+    background-color: #013e5f;
+    border-color: #013e5f;
+}
+
+@media (min-width: 768px) {
+    .header .navbar {
+        background-color: transparent;
+    }
+}
+
+/* ============= How We Work Style ================ */
+.how-we-work {
+    background-color: var(--how-we-work-bg);
+}
+
+.how-we-work__card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid var(--white);
+    border-radius: 1rem;
+}
+
+.how-we-work__card-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.how-we-work__card-circle.circle-1 {
+    background-color: var(--yellow);
+    margin-right: -100px;
+    margin-bottom: -100px;
+}
+.how-we-work__card-circle.circle-2 {
+    background-color: var(--orange);
+    margin-left: -100px;
+    margin-bottom: -100px;
+}
+.how-we-work__card-circle.circle-3 {
+    background-color: var(--primary-blue);
+    margin-bottom: -100px;
+    margin-right: -100px;
+}
+.how-we-work__card-circle.circle-4 {
+    background-color: var(--gree-200);
+    margin-bottom: -100px;
+    margin-left: -100px;
+}
+
+.how-we-work__card-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #ccc;
+}
+
+@media (min-width: 576px) {
+    .how-we-work__card {
+        width: 50%;
+        max-width: 300px;
+    }
+    .how-we-work__card-circle.circle-3 {
+        margin-bottom: unset;
+        margin-top: -100px;
+    }
+    .how-we-work__card-circle.circle-4 {
+        margin-bottom: unset;
+        margin-top: -100px;
+    }
+    .how-we-work__card-icon.top-icon {
+        bottom: unset;
+        top: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .how-we-work__card-wrapper {
+        min-width: 618px;
+        max-width: 618px;
+    }
+}
+/* ============= Packs Style ============= */
+.pack {
+    background-color: var(--pack-bg);
+}
+.pack-slider {
+    position: relative;
+    overflow: hidden;
+}
+.owl-carousel .owl-stage {
+    display: flex;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 1.5rem;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--orange);
+}
+
+.pack__card {
+    height: 100%;
+    padding: 24px 16px;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+.pack__card p {
+    color: var(--gray);
+}
+
+.pack__card-image {
+    max-width: 160px;
+    width: 100%;
+}
+
+.pack__card-deco {
+    fill: #f0ece8;
+    animation-name: svg-color-change, svg-size-scale;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+.pack__card-svg {
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pack__card-clippath {
+    transform: translateY(15px);
+}
+
+.pack__card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.team {
+    background-image: url('./../images/team-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--team-bg);
+    font-size: 1.25rem;
+}
+
+.insights {
+    background-image: url('./../images/inisght-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    color: #000;
+}
+.insights-overlay {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+/* =============== Contact Style ============ */
+.contact {
+    background-color: var(--contact-bg);
+}
+.contact__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 32px);
+    background-color: var(--contact-card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+.contact__address a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
+.contact__map {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: -1rem;
+    box-shadow: var(--box-shadow);
+}
+.contact__map iframe {
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+    .contact__address {
+        width: 320px;
+        height: 400px;
+        padding: 1.5rem;
+        padding-right: 4.5rem;
+    }
+
+    .contact__map {
+        flex: 1;
+        margin-top: 0;
+        margin-left: -3rem;
+    }
+}
+/* ============= Footer Style ============= */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+}
+.footer__logo {
+}
+
+.footer-line {
+    border-top: 1px solid #064272;
+}
+.footer__copyright {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.footer__link {
+    text-decoration: none;
+    color: #bdbdbd;
+    transition: all 0.25s ease;
+}
+.footer__link:hover {
+    color: #bdbdbd;
+    text-decoration: underline;
+}
+
+/* ========== Animations =============  */
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scale(1.2);
+    }
+    50% {
+        transform: translateY(-15px) scale(1);
+    }
+    100% {
+        transform: translateY(0) scale(1.2);
+    }
+}
+
+@keyframes svg-color-change {
+    0% {
+        fill: #f0ece8;
+    }
+    50% {
+        fill: #ededed;
+    }
+    100% {
+        fill: #f0ece8;
+    }
+}
+
+@keyframes svg-size-scale {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.95, 0.95);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
